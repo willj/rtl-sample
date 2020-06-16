@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AddToCart from './addToCart/AddToCart';
+import EnergyMix from './energyMix/EnergyMix';
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
       </header>
 
       <AddToCart />
+
+      <EnergyMix />
 
     </div>
   );
