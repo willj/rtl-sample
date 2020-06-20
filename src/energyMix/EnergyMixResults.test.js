@@ -27,7 +27,7 @@ afterEach(() => mockApi.resetHandlers());
 
 describe('<EnergyMixResults />', () => {
 
-    it('displays a loading indicator, followed then loads and displays results', async () => {
+    it('displays a loading indicator, then loads and displays results', async () => {
 
         const { getByTitle, getByText, queryByText } = render(<EnergyMixResults />);
 
@@ -40,7 +40,6 @@ describe('<EnergyMixResults />', () => {
         expect(dataTable).toHaveTextContent('6.8%');
         expect(dataTable).toHaveTextContent('solar');
         expect(dataTable).toHaveTextContent('18.1%');
-
     });
 
 });
