@@ -42,4 +42,15 @@ describe('<EnergyMixResults />', () => {
         expect(dataTable).toHaveTextContent('0%');
     });
 
+    it('displays results for Scotland when region is set to Scotland', async () => {
+        const { getByTitle } = render(<EnergyMixResults region="Scotland" />);
+
+        const dataTable = await waitFor(() => getByTitle('Scotland Electricity Generation Sources'));
+
+        expect(dataTable).toHaveTextContent('hydro');
+        expect(dataTable).toHaveTextContent('3.2%');
+        expect(dataTable).toHaveTextContent('solar');
+        expect(dataTable).toHaveTextContent('4.4%');
+    });
+
 });
