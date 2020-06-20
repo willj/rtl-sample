@@ -12,7 +12,7 @@ function EnergyMix(){
 
             <RegionPicker selectedRegion={region} onChange={(e) => { setRegion(e.target.value); }} />
 
-            <EnergyMixResults />
+            <EnergyMixResults region={region} />
         </div>
     );
 }
